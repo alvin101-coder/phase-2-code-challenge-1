@@ -64,7 +64,7 @@ function ExpenseForm({ onAddExpense }) {
             name="amount"
             value={formData.amount}
             onChange={handleChange}
-            placeholder="0.00"
+            placeholder="Enter amount in KSh"
             step="0.01"
             min="0"
           />
@@ -82,22 +82,24 @@ function ExpenseForm({ onAddExpense }) {
         </div>
 
         <div className="form-group">
-          <label htmlFor="category">Category:</label>
-          <select
-            id="category"
-            name="category"
-            value={formData.category}
-            onChange={handleChange}
-          >
-            <option value="">Select a category</option>
-            <option value="Food">Food</option>
-            <option value="Transportation">Transportation</option>
-            <option value="Housing">Housing</option>
-            <option value="Utilities">Utilities</option>
-            <option value="Entertainment">Entertainment</option>
-            <option value="Healthcare">Healthcare</option>
-            <option value="Other">Other</option>
-          </select>
+        <label htmlFor="category">Category:</label>
+  <select
+    id="category"
+    name="category"
+    value={formData.category}
+    onChange={handleChange}
+  >
+    <option value="">Select a category</option>
+    <option value="Food & Drinks">Food & Drinks</option>
+    <option value="Groceries">Groceries</option>
+    <option value="Transportation">Transportation</option>
+    <option value="Rent">Rent</option>
+    <option value="Utilities">Utilities</option>
+    <option value="Dining">Dining</option>
+    <option value="Healthcare">Healthcare</option>
+    <option value="Education">Education</option>
+    <option value="Miscellaneous">Miscellaneous</option>
+  </select>
         </div>
 
         <button type="submit">Add Expense</button>
